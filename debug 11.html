@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<body>
+    <script>
+        function bar() {
+    var foo = 0;
+    function foo() {}
+    return typeof foo;
+}
+bar(); // What does this return? Why?
+document.getElementById("demo1").innerHTML= "1st) It will give which type of variable it is becouse we are using typeof function here :- "+bar();
+
+function baz() {
+    var foo;
+    function foo() {}
+    return typeof foo;
+}
+
+baz(); // How about now?
+document.getElementById("demo2").innerHTML="2nd) It will give function becouse we are usig function for foo :- "+baz();
+function quux() {
+    var foo = 0;
+    var foo = function () {}
+    return typeof foo;
+}
+    </script>
+</body>
+</html>
